@@ -5,8 +5,8 @@ const bodyParser  = require('body-parser');
 const fccTesting  = require('./freeCodeCamp/fcctesting.js');
 const session     = require('express-session');
 const passport    = require('passport');
-const ObjectID    = require('mongodb').ObjectID;
 const mongo       = require('mongodb').MongoClient;
+const ObjectID    = require('mongodb').ObjectID;
 const LocalStrategy = require('passport-local');
 
 const app = express();
@@ -26,24 +26,13 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongo.connect(process.env.DATABASE, (err, db) => {
+mongo.connect(process.env.DATABASE, (err, client) => {
+    var db = client.db('myDB');
     if(err) {
         console.log('Database error: ' + err);
     } else {
         console.log('Successful database connection');
-      
-        passport.use(new LocalStrategy(
-          function(username, password, done) {
-            db.collection('users').findOne({ username: username }, function (err, user) {
-              console.log('User '+ username +' attempted to log in.');
-              if (err) { return done(err); }
-              if (!user) { return done(null, false); }
-              if (password !== user.password) { return done(null, false); }
-              return done(null, user);
-            });
-          }
-        ));
-      
+
         passport.serializeUser((user, done) => {
           done(null, user._id);
         });
@@ -56,10 +45,22 @@ mongo.connect(process.env.DATABASE, (err, db) => {
                 }
             );
         });
+      
+        passport.use(new LocalStrategy(
+          function(username, password, done) {
+            db.collection('users').findOne({ username: username }, function (err, user) {
+              console.log('User '+ username +' attempted to log in.');
+              if (err) { return done(err); }
+              if (!user) { return done(null, false); }
+              if (password !== user.password) { return done(null, false); }
+              return done(null, user);
+            });
+          }
+        ));
 
         app.route('/')
           .get((req, res) => {
-            res.render(process.cwd() + '/views/pug/index', {title: 'Hello', message: 'Please login', showLogin: true});
+            res.render(process.cwd() + '/views/pug/index', {title: 'Hello', message: 'login', showLogin: true});
           });
       
         app.route('/login')
