@@ -59,7 +59,17 @@ mongo.connect(process.env.DATABASE, (err, db) => {
 
         app.route('/')
           .get((req, res) => {
-            res.render(process.cwd() + '/views/pug/index', {title: 'Hello', message: 'Please login'});
+            res.render(process.cwd() + '/views/pug/index', {title: 'Hello', message: 'Please login', showLogin: true});
+          });
+      
+        app.route('/login')
+          .post(passport.authenticate('local', { failureRedirect: '/' }),(req,res) => {
+               res.redirect('/profile');
+          });
+      
+        app.route('/profile')
+          .get((req,res) => {
+               res.render(process.cwd() + '/views/pug/profile');
           });
 
         app.listen(process.env.PORT || 3000, () => {
