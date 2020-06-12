@@ -1,6 +1,6 @@
 .border {
-  border-style: inset;
-  border-width: 1px;
+  //border-style: inset;
+  border-width: 10px;
   margin: 10px;
 }
 

@@ -11,40 +11,40 @@ html
     link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.9.1/bootstrap-social.min.css')
     
   body
-    h1.border.center Simple Authentication
-    h2.center#pug-success-message
-    | Looks like this page is being rendered from Pug into HTML!
-    | #{title}
-    p#pug-variable= message
-    
-    
-    
-    if showLogin
-      hr
-      p Login Form
-      form(action='/login', method='post')
-        div
-          label Username:
-          input(type='text', name='username')
-        div
-          label Password:
-          input(type='password', name='password')
-        div
-          input(type='submit', value='Log In')
-          
-    if showRegistration
-      hr
-      p Registration Form
-      form(action='/register', method='post')
-        div
-          label Username:
-          input(type='text', name='username')
-        div
-          label Password:
-          input(type='password', name='password')
-        div
-          input(type='submit', value='Register')
-          
+    //-h1.border.center Simple Authentication
+    //div.col-sm-6.float-md-center.offset-3.jumbotron.center
+    div.jumbotron.offset-3.float-md-center.center
+      h2 Simple Authentication
+      p If not already logged in then register. Login and revisite site to validate the session is working.
+      
+      
+    div
+      if showLogin
+        hr
+        p Login Form
+        form(action='/login', method='post')
+          div
+            label Username:
+            input(type='text', name='username')
+          div
+            label Password:
+            input(type='password', name='password')
+          div
+            input(type='submit', value='Log In')
+
+      if showRegistration
+        hr
+        p Registration Form
+        form(action='/register', method='post')
+          div
+            label Username:
+            input(type='text', name='username')
+          div
+            label Password:
+            input(type='password', name='password')
+          div
+            input(type='submit', value='Register')
+
     div
       .footer
         a(href='https://github.com/TheHexorcist/thehexorcistadvancednode' class='btn btn-social btn-github') The Source
