@@ -1,5 +1,5 @@
 dependencies:
-  bcrypt: 4.0.1
+  bcrypt: 5.0.0
   body-parser: 1.19.0
   cors: 2.8.5
   express: 4.17.1
@@ -14,21 +14,21 @@ packages:
     dev: false
     resolution:
       integrity: sha512-5vW/JXLALhczRCWP0PnFDMCJAchlBvM7f4uk/jXritBnIa6E1KmqmtrS3yn1LAnxFBypQ3eneLuXjsnfQsgILw==
-  /@babel/parser/7.10.1:
+  /@babel/parser/7.10.2:
     dev: false
     engines:
       node: '>=6.0.0'
     hasBin: true
     resolution:
-      integrity: sha512-AUTksaz3FqugBkbTZ1i+lDLG5qy8hIzCaAxEtttU6C0BtZZU9pkNZtWSVAht4EW9kl46YBiyTGMp9xTTGqViNg==
-  /@babel/types/7.10.1:
+      integrity: sha512-PApSXlNMJyB4JiGVhCOlzKIif+TKFTvu0aQAhnTvfP/z3vVSN6ZypH5bfUNwFXXjRQtUEBNFd2PtmCmG2Py3qQ==
+  /@babel/types/7.10.2:
     dependencies:
       '@babel/helper-validator-identifier': 7.10.1
       lodash: 4.17.15
       to-fast-properties: 2.0.0
     dev: false
     resolution:
-      integrity: sha512-L2yqUOpf3tzlW9GVuipgLEcZxnO+96SzR6fjXMuxxNkIgFJ5+07mHCZ+HkHqaeZu8+3LKnNJJ1bKbjBETQAsrA==
+      integrity: sha512-AD3AwWBSz0AWF0AkCN9VPiWrvldXq+/e3cHa4J89vo4ymjz1XwrBFFVZmkJTsQIPNk+ZVomPSXUJqq8yyjZsng==
   /abbrev/1.1.1:
     dev: false
     resolution:
@@ -42,13 +42,13 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-Il80Qs2WjYlJIBNzNkK6KYqlVMTbZLXgHx2oT0pU/fjRHyEp+PEfEPY0R3WCwAGVOtauxh1hOxNgIf5bv7dQpA==
-  /acorn/7.2.0:
+  /acorn/7.3.1:
     dev: false
     engines:
       node: '>=0.4.0'
     hasBin: true
     resolution:
-      integrity: sha512-apwXVmYVpQ34m/i71vrApRrRKCWQnZZF1+npOD0WV5xZFfwWOmKGQ2RWlfdy9vWITsenisM8M0Qeq8agcFHNiQ==
+      integrity: sha512-tLc0wSnatxAQHVHUapaHdz72pi9KUyHjq5KyHjGg9Y8Ifdc79pTh2XvI6I1/chZbnM7QtNKzh66ooDogPZSleA==
   /ansi-regex/2.1.1:
     dev: false
     engines:
@@ -86,7 +86,7 @@ packages:
       integrity: sha512-TaTivMB6pYI1kXwrFlEhLeGfOqoDNdTxjCdwRfFFkEA30Eu+k48W34nlok2EYWJfFFzqaEmichdNM7th6M5HNw==
   /babel-walk/3.0.0-canary-5:
     dependencies:
-      '@babel/types': 7.10.1
+      '@babel/types': 7.10.2
     dev: false
     engines:
       node: '>= 10.0.0'
@@ -96,16 +96,16 @@ packages:
     dev: false
     resolution:
       integrity: sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
-  /bcrypt/4.0.1:
+  /bcrypt/5.0.0:
     dependencies:
-      node-addon-api: 2.0.0
-      node-pre-gyp: 0.14.0
+      node-addon-api: 3.0.0
+      node-pre-gyp: 0.15.0
     dev: false
     engines:
       node: '>= 10.0.0'
     requiresBuild: true
     resolution:
-      integrity: sha512-hSIZHkUxIDS5zA2o00Kf2O5RfVbQ888n54xQoF/eIaquU4uaLxK8vhhBdktd0B3n2MjkcAWzv4mnhogykBKOUQ==
+      integrity: sha512-jB0yCBl4W/kVHM2whjfyqnxTmOHkCX4kHEa5nYKSoGeYe8YrjTYTc87/6bwt1g8cmV0QrbhKriETg9jWtcREhg==
   /bl/2.2.0:
     dependencies:
       readable-stream: 2.3.7
@@ -151,7 +151,7 @@ packages:
       integrity: sha512-zauLjrfCG+xvoyaqLoV8bLVXXNGC4JqlxFCutSDWA6fJrTo2ZuvLYTqZ7aHBLZSMOopbzwv8f+wZcVzfVTI2Dg==
   /character-parser/2.2.0:
     dependencies:
-      is-regex: 1.0.5
+      is-regex: 1.1.0
     dev: false
     resolution:
       integrity: sha1-x84o821LzZdE5f/CxfzeHHMmH8A=
@@ -175,8 +175,8 @@ packages:
       integrity: sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
   /constantinople/4.0.1:
     dependencies:
-      '@babel/parser': 7.10.1
-      '@babel/types': 7.10.1
+      '@babel/parser': 7.10.2
+      '@babel/types': 7.10.2
     dev: false
     resolution:
       integrity: sha512-vCrqcSIq4//Gx74TXXCGnHpulY1dskqLTFGDmhrGxzeXL8lF8kvXv6mpNWlJj1uD4DW23D4ljAqbY4RRaaUZIw==
@@ -380,10 +380,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
-  /function-bind/1.1.1:
-    dev: false
-    resolution:
-      integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
   /gauge/2.7.4:
     dependencies:
       aproba: 1.2.0
@@ -408,18 +404,16 @@ packages:
     dev: false
     resolution:
       integrity: sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==
+  /has-symbols/1.0.1:
+    dev: false
+    engines:
+      node: '>= 0.4'
+    resolution:
+      integrity: sha512-PLcsoqu++dmEIZB+6totNFKq/7Do+Z0u4oT0zKOJNl3lYK6vGwwu2hjHs+68OEZbTjiUE9bgOABXbP/GvrS0Kg==
   /has-unicode/2.0.1:
     dev: false
     resolution:
       integrity: sha1-4Ob+aijPUROIVeCG0Wkedx3iqLk=
-  /has/1.0.3:
-    dependencies:
-      function-bind: 1.1.1
-    dev: false
-    engines:
-      node: '>= 0.4.0'
-    resolution:
-      integrity: sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==
   /http-errors/1.7.2:
     dependencies:
       depd: 1.1.2
@@ -485,7 +479,7 @@ packages:
       integrity: sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==
   /is-expression/4.0.0:
     dependencies:
-      acorn: 7.2.0
+      acorn: 7.3.1
       object-assign: 4.1.1
     dev: false
     resolution:
@@ -508,14 +502,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-+lP4/6lKUBfQjZ2pdxThZvLUAafmZb8OAxFb8XXtiQmS35INgr85hdOGoEs124ez1FCnZJt6jau/T+alh58QFQ==
-  /is-regex/1.0.5:
+  /is-regex/1.1.0:
     dependencies:
-      has: 1.0.3
+      has-symbols: 1.0.1
     dev: false
     engines:
       node: '>= 0.4'
     resolution:
-      integrity: sha512-vlKW17SNq44owv5AQR3Cq0bQPEb8+kF3UKZ2fiZNOWtztYE5i0CzCZxFDwO58qAOWtxdBRVO/V5Qin1wjCqFYQ==
+      integrity: sha512-iI97M8KTWID2la5uYXlkbSDQIg4F6o1sYboZKKTDpnDQMLtUL86zxhgDet3Q2SriaYsyGqZ6Mn2SjbRKeLHdqw==
   /isarray/1.0.0:
     dev: false
     resolution:
@@ -633,7 +627,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
-  /needle/2.4.1:
+  /needle/2.5.0:
     dependencies:
       debug: 3.2.6
       iconv-lite: 0.4.24
@@ -643,22 +637,22 @@ packages:
       node: '>= 4.4.x'
     hasBin: true
     resolution:
-      integrity: sha512-x/gi6ijr4B7fwl6WYL9FwlCvRQKGlUNvnceho8wxkwXqN8jvVmmmATTmZPRRG7b/yC1eode26C2HO9jl78Du9g==
+      integrity: sha512-o/qITSDR0JCyCKEQ1/1bnUXMmznxabbwi/Y4WwJElf+evwJNFNwIDMCCt5IigFVxgeGBJESLohGtIS9gEzo1fA==
   /negotiator/0.6.2:
     dev: false
     engines:
       node: '>= 0.6'
     resolution:
       integrity: sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
-  /node-addon-api/2.0.0:
+  /node-addon-api/3.0.0:
     dev: false
     resolution:
-      integrity: sha512-ASCL5U13as7HhOExbT6OlWJJUV/lLzL2voOSP1UVehpRD8FbSrSDjfScK/KwAvVTI5AS6r4VwbOMlIqtvRidnA==
-  /node-pre-gyp/0.14.0:
+      integrity: sha512-sSHCgWfJ+Lui/u+0msF3oyCgvdkhxDbkCS6Q8uiJquzOimkJBvX6hl5aSSA7DR1XbMpdM8r7phjcF63sF4rkKg==
+  /node-pre-gyp/0.15.0:
     dependencies:
       detect-libc: 1.0.3
       mkdirp: 0.5.5
-      needle: 2.4.1
+      needle: 2.5.0
       nopt: 4.0.3
       npm-packlist: 1.4.8
       npmlog: 4.1.2
@@ -669,7 +663,7 @@ packages:
     dev: false
     hasBin: true
     resolution:
-      integrity: sha512-+CvDC7ZttU/sSt9rFjix/P05iS43qHCOOGzcr3Ry99bXG7VX953+vFyEuph/tfqoYu8dttBkE86JSKBO2OzcxA==
+      integrity: sha512-7QcZa8/fpaU/BKenjcaeFF9hLz2+7S9AqyXFhlH/rilsQ/hPZKK32RtR5EQHJElgu+q5RfbJ34KriI79UWaorA==
   /nopt/4.0.3:
     dependencies:
       abbrev: 1.1.1
@@ -852,7 +846,7 @@ packages:
       pug-error: 2.0.0
       pug-runtime: 3.0.0
       void-elements: 3.1.0
-      with: 7.0.1
+      with: 7.0.2
     dev: false
     resolution:
       integrity: sha512-xJIGvmXTQlkJllq6hqxxjRWcay2F9CU69TuAuiVZgHK0afOhG5txrQOcZyaPHBvSWCU/QQOqEp5XCH94rRZpBQ==
@@ -1227,17 +1221,17 @@ packages:
     dev: false
     resolution:
       integrity: sha512-QGkOQc8XL6Bt5PwnsExKBPuMKBxnGxWWW3fU55Xt4feHozMUhdUMaBCk290qpm/wG5u/RSKzwdAC4i51YigihA==
-  /with/7.0.1:
+  /with/7.0.2:
     dependencies:
-      '@babel/parser': 7.10.1
-      '@babel/types': 7.10.1
+      '@babel/parser': 7.10.2
+      '@babel/types': 7.10.2
       assert-never: 1.2.1
       babel-walk: 3.0.0-canary-5
     dev: false
     engines:
       node: '>= 10.0.0'
     resolution:
-      integrity: sha512-TpHxhlaRS5mNJbCDXqbDJB4qhyV8zQUPytY3o3cCb6t2m13Qw+vsWFvJCBBIkWILRjNlmlnvd/0AW0dPaO7n/w==
+      integrity: sha512-RNGKj82nUPg3g5ygxkQl0R937xLyho1J24ItRCBTr/m1YnZkzJy1hUiHUJrc/VlsDQzsCnInEGSg3bci0Lmd4w==
   /wrappy/1.0.2:
     dev: false
     resolution:
@@ -1250,7 +1244,7 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  bcrypt: ^4.0.1
+  bcrypt: ^5.0.0
   body-parser: ^1.19.0
   cors: ^2.8.5
   express: ^4.17.1
