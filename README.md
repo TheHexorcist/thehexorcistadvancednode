@@ -1,1 +1,1 @@
-https://https://thehexorcistadvandednode.herokuapp.com/
+https://thehexorcistadvandednode.herokuapp.com/
